@@ -73,7 +73,7 @@ def polar_angle(p0, p1):
     return angle
 
 def ccw(p1, p2, p3):
-    return (p1[0]-p2[0])*(p3[1]-p1[1]) - (p3[0]-p1[0])*(p2[1]-p1[1])
+    return (p2[0]-p1[0])*(p3[1]-p1[1]) - (p2[1]-p1[1])*(p3[0]-p1[0])
 
 def graham(points):
     p0 = min(points, key = lambda p: (p[1], p[0]))
@@ -93,9 +93,11 @@ def graham(points):
 
     return stack
 
-
-
-
-
-
 points = [(1,10),(1,4),(4,1),(4,5),(8,7)] 
+
+convex_hull = graham(points)
+
+# Print the convex hull points
+print("Convex Hull Points:")
+for point in convex_hull:
+    print(point)

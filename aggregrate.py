@@ -38,6 +38,3 @@ print(f'total ops: {op}')
 
 amortized_cost = cost/op
 print('Amortized Cost per operation : ',amortized_cost)    
-
-
-########################################################################
