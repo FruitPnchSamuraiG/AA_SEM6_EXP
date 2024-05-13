@@ -40,8 +40,6 @@ def insert_node(value):
     return root_node
 
 def print_tree(node, indent=0, prefix="root"):
-    if indent == 0:
-        print()
     if node is not None:
         print("|" * indent + "--" * indent + f"{'' if indent == 0 else ' '}" + f"{prefix}: ({node.value[0]}, {node.value[1]})")
         print_tree(node.left, indent + 1, "left")
